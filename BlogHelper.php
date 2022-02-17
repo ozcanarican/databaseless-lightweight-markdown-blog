@@ -8,7 +8,7 @@ class BlogHelper
         $cdir = scandir($dir);
         foreach ($cdir as $file) {
             if (!in_array($file, array(".", ".."))) {
-                $files[$file] = filemtime($dir . '/' . $file);
+                $files[$file] = filectime($dir . '/' . $file);
             }
         }
         arsort($files);
@@ -18,20 +18,20 @@ class BlogHelper
     public function getTags()
     {
         $tags = array();
-        $scanned = $this->scan("contents/article/");
+        $scanned = $this->scan(ARTICLE_PATH . "/");
         return json_encode($scanned);
     }
     public function getArticles($tag, $number, $page)
     {
         $start = $page * $number;
-        $articles = $this->scan("contents/article/" . $tag . "/");
-        return json_encode(array_splice($articles, $start, $number));
+        $articles = $this->scan(ARTICLE_PATH . "/" . $tag . "/");
+        return array_splice($articles, $start, $number);
     }
     public function getArticle($tag, $article)
     {
         $data = "{}";
         $content = "";
-        $file = file_get_contents("contents/article/" . $tag . "/" . $article);
+        $file = file_get_contents(ARTICLE_PATH . "/" . $tag . "/" . $article);
         $parts = explode("}", $file);
         if (count($parts) > 0) {
             $data = $parts[0] . "}";

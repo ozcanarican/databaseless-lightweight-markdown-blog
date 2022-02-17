@@ -1,10 +1,13 @@
 <?
+include "blogconf.php";
 require __DIR__ . '/vendor/autoload.php';
 $parse = new Parsedown();
-
 include "BlogHelper.php";
+
+
 $helper = new BlogHelper();
 //print_r($helper->getTags());
-//print_r($helper->getArticles("makaleler", 3, 0));
-$makale = $helper->getArticle("makaleler", "2021-07-11-git-ve-github-nedir.md");
+$makaleler = $helper->getArticles("makaleler", 3, 0);
+//echo ($makaleler[0]);
+$makale = $helper->getArticle("makaleler", $makaleler[0]);
 echo $parse->text($makale["content"]);
