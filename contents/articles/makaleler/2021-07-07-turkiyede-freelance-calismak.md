@@ -27,7 +27,7 @@ Asıl konuya şimdi giriyoruz. Karşına çıkacak müşteri profili, kurumsal b
 
 İster bir grafiker, bir yazılımcı ya da danışman olarak hizmet ver, kısa sürede anlayacağın üzere, bu ülkedeki iş hacminin, doğrudan müşterin ile içtiğin çay sayısı ile doğru orantısı var.
 
-![çay işlem doğrusu](contents/media/cay-islem.jpg)
+![çay işlem doğrusu](/contents/media/cay-islem.jpg)
 
 Yukarıdaki grafiğin özetle anlatmak istediği, müşteriler, çoğunlukla sizinle oturup karşılıklı bir çay içmeden herhangi bir anlaşmayı nihayete erdirmek istemeyecekler.
 

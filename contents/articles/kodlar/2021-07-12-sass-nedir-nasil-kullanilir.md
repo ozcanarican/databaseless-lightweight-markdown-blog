@@ -19,10 +19,10 @@ SASS ile çalışmak için en rahat ortam VISUAL STUDIO CODE. Bu editör sahip o
 **1.** [Bu adrese girerek](https://code.visualstudio.com/download) VSC programını bilgisayarına indir ve kur.
 
 **2.** VSC 'yi açarak, programın **Uzantılar** bölümüne gir.
-![VSC Araç Yükleme](contents/media/sass-vsc-uzantilar.jpg)
+![VSC Araç Yükleme](/contents/media/sass-vsc-uzantilar.jpg)
 
 **3.** Uzantı arama çubuğuna **Live Sass Compiler** yazarak arama yap ve çıkan ilk uzantıyı **install** tuşuna basarak kur.
-![live sass compiler](contents/media/sass-live-sass-compiler.jpg)
+![live sass compiler](/contents/media/sass-live-sass-compiler.jpg)
 
 Hepsi bu kadar. Artık SASS ile çalışmaya başlayabiliriz.
 
@@ -49,7 +49,7 @@ Bilgisayarımızda SASS ile çalışma ortamını hazırladığımıza göre, ö
 Hal-i hazırda link verdiğim ama henüz yaratmadığım **main.css** dosyasını, doğrudan yeni bir dosya oluşturarak eklemeyeceğim. Bunun yerine _main.scss_ dosyası yaratarak, bunun otomatik olarak _main.css_ dosyasına dönüştürülmesini sağlayacağım.
 
 VSC üzerine yeni bir dosya yaratarak adına **main.scss** yazıyorum ve daha sonra, VSC 'un alt sağ köşesindeki **Watch Sass** tuşuna basıyoruz.
-![live sass compile](contents/media/sass-compile.jpg)
+![live sass compile](/contents/media/sass-compile.jpg)
 
 Bu tuşa basar basmaz, yüklediğimiz eklentinin otomatik olarak bize **main.css** dosyasını yarattığını göreceksin. Alt kısımda açılan terminalde ise **Watching** ifadesi karşına çıkacak. Artık SASS dosyasında yaptığımız her değişiklik, otomatik olarak **main.css** dosyasına CSS dilinde aktarılacak. Bu CSS dosyasını düzenlemeye hiç ihtiyacımız olmadığı için, açmana bile gerek yok.
 
@@ -71,12 +71,12 @@ Geldik SASS 'ın faydalarına... Daha önce de bahsettiğim, en çok kullanılan
 ```
 
 index dosyamızda böyle bir kod olduğunu düşünelim ve bunu SASS ile biçimlendirelim ve bizim için yaratılan CSS dosyasına bakalım.
-![scss vs css](contents/media/sass-scss-vs-css.jpg)
+![scss vs css](/contents/media/sass-scss-vs-css.jpg)
 
 Resimde de görüldüğü gibi, SASS dosyasında, tüm **nav** ve çocuklarını **nav** etiketi altında biçimlendirdim. Öte yandan CSS dosyasında klasik, ayrı ayrı yazılmış CSS seçicileri mevcut.
 
 SASS ile, header, footer, hero gibi klasik alanları, tek bir blok halinde yazıp, bu alanları küçültebiliyorsun ve, daha sonradan sitede düzenleme yaparken, yalnızca değişiklik yapacağın bölümü açabiliyorsun.
 
-![sass nedir](contents/media/sass-blog.jpg)
+![sass nedir](/contents/media/sass-blog.jpg)
 
 Örneğin yukarıdaki SASS dosyası görüntüsü, bu blog sitesini biçimlendiren dosyanın ekran görüntüsü. Dediğim gibi, bütün kod blockları kapalı halde, bir düzen içerisinde duruyor ve bu da benim siteyi çok rahat bir şekilde düzenlememe olanak tanıyor.

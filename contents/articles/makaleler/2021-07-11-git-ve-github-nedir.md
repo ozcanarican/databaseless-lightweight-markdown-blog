@@ -1,7 +1,7 @@
 {
 "title": "GIT ve GITHUB NEDİR, NE İŞE YARAR?",
 "description": "Eğer bir süredir yazılım dünyasındaysan, mutlaka git ya da github terimlerini daha önce duymuş olmasın. Yeni projen için bu teknolojilerin işine yarayıp yaramayacağını birlikte inceleyelim",
-"image": "contents/media/github-nedir.jpg",
+"image": "contents/media/github-nedir.jpg"
 }
 
 ## GIT Nedir?
@@ -32,7 +32,7 @@ MAC bilgisayarlara GIT yüklemenin en kolay yolu, XCode yüklemek.
 
 Evet! Bilgisayarımızda GIT kurduğumuza göre, hemen bir örnek üzerinde denemeler yapalım. Özellikle GIT gibi terminali sık kullanacağın projeler için, editör olarak VISUAL STUDIO CODE kullanmanı tavsiye ederim. Tamamen ücretsiz, Microsoft tarafından geliştirilen bu editör, kolayca terminale erişmene olanak sağlayıp, işlerini kolaylaştıracaktır.
 
-![yeni git projesi](contents/media/git-projem.jpg)
+![yeni git projesi](/contents/media/git-projem.jpg)
 
 Resimde görüldüğü gibi, Visual Studio 'yu açarak, git-projem isimli yeni bir çalışma klasörü oluşturdum. Visual Studio üzerinde, hızlıca terminal ekranını açmak için **CTRL + SHIFT + "** klavye kombinasyonunu kullanabilirsin.
 
@@ -59,7 +59,7 @@ d-----        11.07.2021     13:22                refs
 
 Gördüğün gibi, .git klasörü açılmış ve GIT kendi çalışma ortamını içine kurmuş. Bir önceki dizine geri dönerek, ilk dosyamızı oluşturalım ve bunu GIT 'e ekleyelim.
 
-![git-ilk-dosya](contents/media/git-merhaba-dunya.jpg)
+![git-ilk-dosya](/contents/media/git-merhaba-dunya.jpg)
 
 Resimde görüldüğü gibi index.html isimli bir dosya oluşturdum ve bu dosyanın GIT versionları tarafından takip edilmesini sağlamak için, terminale `git add index.html` komutunu yazdım. Artık bu proje içerisinde, ne zaman index.html dosyasını değiştirsem, GIT bu değişiklikleri fark ederek, her yeni bir sürümde değiştirilmiş index.html 'in varyasyonlarını saklayacak.
 
@@ -68,7 +68,7 @@ Resimde görüldüğü gibi index.html isimli bir dosya oluşturdum ve bu dosyan
 
 index.html dosyasını GIT sistemine dahil etmiş olsak bile, henüz bu dosya ile bir GIT sürümü oluşturmadık. GIT 'in çalışma prensibini anlamak için, aşağıdaki resme bir göz atalım.
 
-![git-staging](contents/media/git-staging.jpg)
+![git-staging](/contents/media/git-staging.jpg)
 
 Yarattığımız ve GIT 'e eklediğimiz her dosya, GIT tarafından versiyonlanmadan önce, mutlaka STAGING ALANI(AREA) diye isimlendirdiğimiz bölüme gider. Staging alanını, bir sonraki versiyon yaratımında değişikliğe uğrayacak ya da eklenecek dosyaların gösterildiği bir vitrin olarak düşünebiliriz.
 
@@ -113,7 +113,7 @@ Diyelim ki, daha önce yarattığımız index.html üzerinde korkunç(!) bir hat
 `git restore dosyaadı`
 
 Bizim senaryomuza göre, dosyaadı kısmı index.html olacak. Bunu test edebilmek için, önce index.html dosyamız üzerinde trajik bir hata yapalım.
-![gule gule dünya](contents/media/git-gule-gule.jpg)
+![gule gule dünya](/contents/media/git-gule-gule.jpg)
 
 Resimde görebildiğin gibi, Merhaba Dünya yazısını değiştirerek, Güle Güle Dünya yazdım. Bu olumsuz ve pesismistik mesajı, eski neşeli haline getirmek için
 `git restore index.html`
@@ -143,7 +143,7 @@ Bu işlem sandığından çok daha kolay. Hemen adım adım gidelim.
 
 **2.** Profil sayfana giderek, yeni bir proje yarat.
 
-![github yeni proje](contents/media/git-new-repo.jpg)
+![github yeni proje](/contents/media/git-new-repo.jpg)
 
 Terminoloji olarak, GIT projelerine repo ya da repository deniyor. Profil sayfana girdiğinde, yeşil "New" tuşuna basarak yeni proje yarat.
 
@@ -151,11 +151,11 @@ Terminoloji olarak, GIT projelerine repo ya da repository deniyor. Profil sayfan
 
 **4.** Github uygulamasına giriş yaptıktan sonra, tek yapman gereken **Menü** 'den **File** a tıklayarak **Add local repository** seçeneğine tıklamak. git-projem klasörünün yerini bilgisayar üzerinde seç.
 
-![yerel repository](contents/media/git-add-local.jpg)
+![yerel repository](/contents/media/git-add-local.jpg)
 
 **5.** Son olarak **Publish repository** tuşuna basarak, yerel projeni, github üzerinde açtığın repository içerisine yüklemek.
 
-![yerel repository](contents/media/git-publish.jpg)
+![yerel repository](/contents/media/git-publish.jpg)
 
 GIT ve GITHUB dünyası oldukça derin, öğrenmesi biraz zaman alabilen platformlar. Yine de her yazılımcının bilmesi elzem diye düşündüğüm için, mutlaka yüzelsel de olsa projelerinde kullanmanı tavsiye ederim.
 

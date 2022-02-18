@@ -1,0 +1,33 @@
+{{include("header.html")}}
+<div class="content">
+	<h1>{{title}}</h1>
+	<div class="blogs">
+		{% for post in posts %}
+			<div class="blog">
+				<img src="/{{post['data']['image']}}" alt="{{post["data"]["title"]}}">
+				<div class="info">
+					<h3>{{post["data"]["title"]}}</h3>
+					<p>{{post["data"]["description"]}}</p>
+					<a href="/{{prefix}}/makaleler/{{ post['file'] }}">
+						<button>DEVAMINI OKU</button>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+
+	</div>
+	<div class="navigation">
+		{% if pre|length > 0 %}
+			<a href="{{pre}}">
+				<i class="fas fa-angle-left"></i>
+				Önceki</a>
+		{% endif %}
+		{% if next|length > 0 %}
+			<a href="{{next}}">Sonraki
+				<i class="fas fa-angle-right"></i>
+			</a>
+		{% endif %}
+	</div>
+</div>
+
+{{include("footer.html")}}

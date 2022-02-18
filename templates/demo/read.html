@@ -1,0 +1,14 @@
+{{include("header.html")}}
+<div class="blog-content">
+	<div class="post-header">
+		<h1>{{title}}</h1>
+		<div class="date">
+			{{date}}</div>
+	</div>
+	<img class="postimage" src="/{{image}}" alt="{{title}}">
+
+	{{post|raw}}
+
+</div>
+
+{{include("footer.html")}}

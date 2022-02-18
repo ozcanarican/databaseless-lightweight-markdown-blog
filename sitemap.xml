@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--generator-class="Icamys\SitemapGenerator\SitemapGenerator"-->
+<!--generator-version="4.3.3"-->
+<!--generated-on="2022-02-17T22:54:30+01:00"-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+  <loc>https://ozcanarican.com/posts/kodlar/2021-07-11-responsive-navbar</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/kodlar/2021-07-12-sass-nedir-nasil-kullanilir</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/kodlar/2021-07-13-css-ile-yuklenme-animasyonu</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/kodlar/2021-07-24-nodejs-ile-dosya-transferi</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/kodlar/2021-07-29-js-fetch-nasil-kullanilir</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/makaleler/2021-07-07-turkiyede-freelance-calismak</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/makaleler/2021-07-11-git-ve-github-nedir</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/makaleler/2021-07-13-nasil-mobil-yazilimci-olunur</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://ozcanarican.com/posts/makaleler/2021-08-20-javascript-vs-python</loc>
+  <lastmod>2022-02-17T22:54:30+01:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>0.5</priority>
+ </url>
+</urlset>

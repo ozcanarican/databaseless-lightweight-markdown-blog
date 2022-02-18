@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC]
+RewriteRule ^([0-9a-zA-Z_-]+)_page([0-9a-zA-Z_-]+) $1.php?page=$2 [NC,L]
+RewriteRule ^icerik/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+) read.php?tag=$1&article=$2 [NC,L]

@@ -5,7 +5,7 @@
 }
 Proje sonundaki hedefimiz, herhangi bir işletim sisteminden çalıştırılan serverımıza, herhangi bir cihazdan kolaylıkla dosyalarımızı transfer etmek olacak. Bunu yapabilmek için, ortam bağımsız dillerden olan NodeJS 'yi tercih ettim. Bu ortamda geliştireceğimiz sunucuyu, ister windows, ister linux, istersen macos işletim sistemden çalıştır, android ya da ios cihazından o bilgisayara dosyalarını transfer edebileceksin.
 
-![NodeJS Sunucusu](contents/media/node-file-server-windows.jpg)
+![NodeJS Sunucusu](/contents/media/node-file-server-windows.jpg)
 
 Bu işlemi kolayca yapabilmek için, NodeJS 'nin yaratacağı web adresini bir QRCODE 'a yazdırmayı uygun buldum. Telefonumuzdan kolayca bu kodu taratıp, adres yazmakla uğraşmadan, çektiğimiz fotoğrafları saniyeler içerisinde transfer edebiliriz.
 
@@ -283,7 +283,7 @@ npm run start
 
 Yukarıdaki komutu terminale yazdıktan sonra, karşına bir adet QRCODE ve yazı olarak sunucu adresi çıkmalı. Bu QRCODE 'unu telefonuna okutarak, karşına çıkacak olan websitesinden, dosyalarını sunucuya gönderebilirsin.
 
-![Node File Server Android](contents/media/node-server-phone.jpg)
+![Node File Server Android](/contents/media/node-server-phone.jpg)
 
 ## GITHUB
 

@@ -1,0 +1,52 @@
+{{include("header.html")}}
+
+<div class="hero">
+	<div class="info">
+		<h1>{{ heroPost['data']['title'] }}</h1>
+		<p>{{ heroPost['data']['description'] }}</p>
+		<a href="{{prefix}}/makaleler/{{ heroPost['file'] }}">
+			<button>DEVAMINI OKU</button>
+		</a>
+	</div>
+	<img src="{{ heroPost['data']['image'] }}" alt="Javascript vs Python">
+</div>
+
+<div class="content">
+
+	<h2>YAZILIM GÖNDERİLERİ</h2>
+	<div class="blogs">
+		{% for post in posts %}
+			<div class="blog">
+				<img src="{{post["data"]["image"]}}" alt="{{post["data"]["title"]}}">
+				<div class="info">
+					<h3>{{post["data"]["title"]}}</h3>
+					<p>{{post["data"]["description"]}}</p>
+					<a href="{{prefix}}/makaleler/{{ post['file'] }}">
+						<button>DEVAMINI OKU</button>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+
+	</div>
+
+	<h2>ÖRNEK KODLAR</h2>
+	<div class="codes">
+		{% for post in codes %}
+			<div class="code">
+				<img src="{{post["data"]["image"]}}" alt="{{post["data"]["title"]}}">
+				<div class="info">
+					<h3>{{post["data"]["title"]}}</h3>
+					<p>{{post["data"]["description"]}}</p>
+					<a href="{{prefix}}/kodlar/{{ post['file'] }}">
+						<button>DEVAMINI OKU</button>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+
+</div>
+
+{{include("footer.html")}}

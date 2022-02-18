@@ -5,7 +5,7 @@
 }
 Javascript (1995) ve Python(1991) uzun yıllardır programlama dünyasının göbeğinde bulunan, çokça kaynağa, geliştiriciye sahip olan ve hala popülerliğini koruyabilmiş iki dil... Bu dillerin geliştiricileri arasında nedendir bilinmez, yine hemen hemen aynı uzunlukta süregelen bir karşılaştırma gerginliğini hala twitter, reddit gibi platformlar üzerinde görebilirsiniz. Bu tarz sosyal medya ağları, yazılımcıları kendi doğası içinde incelemek için harikulade yerler.
 
-![Programcılar kendi doğasında](contents/media/observe-engineers.jpg)
+![Programcılar kendi doğasında](/contents/media/observe-engineers.jpg)
 
 ## Seçilmiş Dil ve Ölümcül Yadigarlar
 

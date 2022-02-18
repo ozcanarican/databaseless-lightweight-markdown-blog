@@ -2,6 +2,7 @@
     "require": {
         "erusev/parsedown": "^1.7",
         "twig/twig": "^3.3",
-        "league/commonmark": "^2.2"
+        "league/commonmark": "^2.2",
+        "icamys/php-sitemap-generator": "^4.3"
     }
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{title}}</title>
+		<meta name="description" content="{{desc}}">
+		<link rel="stylesheet" href="/{{root}}/assets/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+		<script>
+			window.OneSignal = window.OneSignal || [];
+OneSignal.push(function () {
+OneSignal.init({appId: "a04f860e-fa88-4082-abdb-4014c7390312"});
+});
+		</script>
+	</head>
+	<body>
+
+		<div class="popup" id="piletisim" style="display:none">
+			<div class="popup-content">
+				<form action="POST" data-netlify="true">
+					<h2>İletişim Formu</h2>
+					<small>Elimden geldiğince hızlı cevap vereceğim</small>
+					<label for="isim">İsminiz</label>
+					<input type="text" id="isim" name="isim" required>
+					<label for="email">E-Mail Adresiniz</label>
+					<input type="email" name="email" id="email" required>
+					<label for="mesaj">Mesajınız</label>
+					<textarea name="mesaj" id="mesaj" required></textarea>
+					<div class="buttons">
+						<button type="submit">GÖNDER</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<header>
+			<div class="logo">
+				<a href="/"><img src="/{{root}}/assets/images/logo.png" alt="özcan arıcan"></a>
+			</div>
+			<div class="main-menu">
+				<label for="main-check" class="hamburger">
+					<i class="fas fa-bars"></i>
+				</label>
+				<input type="checkbox" id="main-check">
+				<ul>
+					<li><a href="/">Ana Sayfa</a></li>
+					<li><a href="/makaleler">Makaleler</a></li>
+					<li><a href="/kodlar">Kodlar</a></li>
+					<li><a href="/hakkimda">Hakkimda</a></li>
+					<li><a href="#" id="iletisim">İletişim</a></li>
+				</ul>
+			</div>
+		</header>
+		<main>
