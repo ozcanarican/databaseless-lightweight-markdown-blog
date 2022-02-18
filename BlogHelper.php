@@ -73,7 +73,7 @@ class BlogHelper
         $parts = explode("}", $file);
         if (count($parts) > 0) {
             $data = $parts[0] . "}";
-            $content = $parts[1];
+            $content = str_replace($data, "", $file);
         } else {
             $content = $file;
         }
