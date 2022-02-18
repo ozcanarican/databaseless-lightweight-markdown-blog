@@ -11,6 +11,7 @@ define("EMAILUSER", "");
 define("EMAILPASS", "");
 define("EMAILSUBJECT", "From My Blog");
 
+
 //-----Do Not Change ----
 $root = 'templates/' . TEMPLATE;
 $loader = new \Twig\Loader\FilesystemLoader($root);
