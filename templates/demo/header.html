@@ -15,12 +15,20 @@ OneSignal.push(function () {
 OneSignal.init({appId: "a04f860e-fa88-4082-abdb-4014c7390312"});
 });
 		</script>
+		    <meta property="og:title" content="{{title}}">
+			<meta property="og:description" content="{{description}}">
+			<meta property="og:image" content="/content/media/ozcanarican.jpg">
+		
+			<meta name="twitter:title" content="{{title}}">
+			<meta name="twitter:description" content="{{description}}">
+			<meta name="twitter:image" content="/content/media/ozcanarican.jpg">
+			<meta name="twitter:card" content="summary_large_image">
 	</head>
 	<body>
 
 		<div class="popup" id="piletisim" style="display:none">
 			<div class="popup-content">
-				<form action="POST" data-netlify="true">
+				<form id="contact">
 					<h2>İletişim Formu</h2>
 					<small>Elimden geldiğince hızlı cevap vereceğim</small>
 					<label for="isim">İsminiz</label>

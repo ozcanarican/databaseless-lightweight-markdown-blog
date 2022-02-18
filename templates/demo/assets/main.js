@@ -14,21 +14,21 @@ document.getElementById("iletisim").addEventListener("click", (e) => {
   document.getElementById("piletisim").style.display = "flex";
 });
 
-// const callback = (entries, observer) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       alert("load more");
-//     }
-//   });
-// };
-
-// const more = document.getElementById("more");
-// if (more) {
-//   let options = {
-//     root: null,
-//     rootMargin: "0px",
-//     threshold: 1,
-//   };
-//   let observer = new IntersectionObserver(callback, options);
-//   observer.observe(more);
-// }
+document.getElementById("contact").addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e.target.elements);
+  let fd = new FormData();
+  fd.append("test", "asd");
+  Array.from(e.target.elements).forEach((el) => {
+    if (el.nodeName === "INPUT" || el.nodeName === "TEXTAREA") {
+      fd.append(el.getAttribute("name"), el.value);
+    }
+  });
+  e.target.style.display = "none";
+  fetch("postmail.php", { body: fd, method: "POST" })
+    .then((r) => r.text())
+    .then((r) => console.log(r));
+  e.target.parentNode.appendChild(
+    document.createTextNode("Mesajınız gönderildi")
+  );
+});

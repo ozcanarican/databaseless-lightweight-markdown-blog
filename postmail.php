@@ -10,13 +10,12 @@ require 'blogconf.php';
 function mailAt($reply, $name, $konu, $mesaj)
 {
     $mail = new PHPMailer(true);
-
     try {
         //Server settings
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
         $mail->isSMTP();                                            // Send using SMTP
         $mail->CharSet = 'UTF-8';
-        $mail->SMTPDebug = false;
+        $mail->SMTPDebug = true;
         $mail->Host       = EMAILSERVER;                    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $mail->Username   = EMAILUSER;                     // SMTP username
@@ -36,8 +35,13 @@ function mailAt($reply, $name, $konu, $mesaj)
         $mail->AltBody = $mesaj;
 
         $mail->send();
-        //echo 'Mail yollandı';
     } catch (Exception $e) {
-        //echo "Mail hata: {$mail->ErrorInfo}";
+        echo "Mail hata: {$mail->ErrorInfo}";
     }
+}
+
+if (isset($_POST['email']) && isset($_POST['isim']) && isset($_POST['mesaj'])) {
+    mailAt($_POST['email'], $_POST['isim'], EMAILSUBJECT, $_POST['mesaj']);
+} else {
+    echo "Missing fields";
 }

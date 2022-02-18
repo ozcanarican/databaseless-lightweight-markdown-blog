@@ -8,7 +8,28 @@
 	<img class="postimage" src="/{{image}}" alt="{{title}}">
 
 	{{post|raw}}
+</div>
 
+<div class="content">
+	<div class="similiars">
+		{% if similiars|length > 0 %}
+			<h2>Benzer Yazılar</h2>
+			<div class="blogs">
+				{% for post in similiars %}
+					<div class="blog">
+						<img src="/{{post['data']['image']}}" alt="{{post["data"]["title"]}}">
+						<div class="info">
+							<h3>{{post["data"]["title"]}}</h3>
+							<p>{{post["data"]["description"]}}</p>
+							<a href="/{{prefix}}/{{tag}}/{{ post['file'] }}">
+								<button>DEVAMINI OKU</button>
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
 </div>
 
 {{include("footer.html")}}

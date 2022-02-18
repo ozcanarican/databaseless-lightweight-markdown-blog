@@ -577,4 +577,12 @@ main .call-to-action > * {
   color: white;
   border-radius: 0.2em;
 }
+
+.similiars {
+  border-top: 1px solid #e6e6e6;
+}
+
+.similiars h2 {
+  color: #323232;
+}
 /*# sourceMappingURL=style.css.map */

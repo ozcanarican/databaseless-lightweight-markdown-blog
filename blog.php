@@ -10,13 +10,15 @@ if (isset($_GET['file'])) {
     //get requested file
     $articleFile = $_GET['file'] . ".md";
     $article = $helper->getArticle($_GET['tag'], $articleFile);
-
+    $similiar = $helper->getSimiliar($_GET['tag'], $articleFile, 3);
     echo $twig->render('read.html', [
+        'tag' => $_GET['tag'],
         'title' => $article["data"]["title"],
         'desc' => $article["data"]["description"],
         'post' => $parse->text($article["content"]),
         'image' => $article["data"]["image"],
-        'date' => date("d.m.Y", $article["data"]["date"])
+        'date' => date("d.m.Y", $article["data"]["date"]),
+        'similiars' => $similiar
     ]);
 }
 //if it is a tag request
@@ -46,6 +48,7 @@ else {
     //final check if there are posts
     if (count($posts) > 0) {
         echo $twig->render('page.html', [
+            'tag' => $_GET['tag'],
             'root' => $root,
             'title' => "Yazılım Makaleleri",
             'desc' => "Yazılım ve design hakkındaki kişisel fikirlerimi ve görüşlerimi içeren yazılar",

@@ -98,4 +98,29 @@ class BlogHelper
         $data["date"] = filectime("contents/statics/" . $article);
         return array("data" => $data, "content" => $content);
     }
+
+    public function getSimiliar($tag, $f, $amount)
+    {
+        $dir = ARTICLE_PATH . "/" . $tag . "/";
+        $files = array();
+        $data = array();
+        $cdir = @scandir($dir);
+        if ($cdir) {
+            foreach ($cdir as $file) {
+                if (!in_array($file, array(".", "..", $f))) {
+                    array_push($files, $file);
+                }
+            }
+            shuffle($files);
+            if ($amount > count($files)) {
+                $amount = count($files);
+            }
+            $files = array_splice($files, 0, $amount);
+            foreach ($files as $file) {
+                $d = $this->getArticle($tag, $file);
+                array_push($data, array("file" => str_replace(".md", "", $file), "data" => $d["data"]));
+            }
+        }
+        return $data;
+    }
 }
