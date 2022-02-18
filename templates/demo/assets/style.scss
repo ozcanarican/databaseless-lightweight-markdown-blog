@@ -337,6 +337,7 @@ main {
 
 .postimage {
   width: 100%;
+  object-fit: contain;
   @include desktop() {
     grid-column: 2/3;
   }

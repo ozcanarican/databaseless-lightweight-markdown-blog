@@ -5,14 +5,16 @@ class BlogHelper
     {
         $files = array();
 
-        $cdir = scandir($dir);
-        foreach ($cdir as $file) {
-            if (!in_array($file, array(".", ".."))) {
-                $files[$file] = filectime($dir . '/' . $file);
+        $cdir = @scandir($dir);
+        if ($cdir) {
+            foreach ($cdir as $file) {
+                if (!in_array($file, array(".", ".."))) {
+                    $files[$file] = filectime($dir . '/' . $file);
+                }
             }
+            arsort($files);
+            $files = array_keys($files);
         }
-        arsort($files);
-        $files = array_keys($files);
         return $files;
     }
 
@@ -31,6 +33,19 @@ class BlogHelper
         }
 
         return $result;
+    }
+
+    public function findArticle($file)
+    {
+        $all = $this->getAll();
+        foreach ($all as $tag => $values) {
+            foreach ($values as $f) {
+                if ($file == $f) {
+                    return $tag;
+                }
+            }
+        }
+        return false;
     }
 
     public function getTags()
@@ -64,6 +79,23 @@ class BlogHelper
         }
         $data = json_decode($data, true);
         $data["date"] = filectime(ARTICLE_PATH . "/" . $tag . "/" . $article);
+        return array("data" => $data, "content" => $content);
+    }
+
+    public function getStatic($article)
+    {
+        $data = "{}";
+        $content = "";
+        $file = file_get_contents("contents/statics/" . $article);
+        $parts = explode("}", $file);
+        if (count($parts) > 0) {
+            $data = $parts[0] . "}";
+            $content = $parts[1];
+        } else {
+            $content = $file;
+        }
+        $data = json_decode($data, true);
+        $data["date"] = filectime("contents/statics/" . $article);
         return array("data" => $data, "content" => $content);
     }
 }

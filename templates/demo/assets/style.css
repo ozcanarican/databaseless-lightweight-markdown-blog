@@ -408,6 +408,8 @@ main .call-to-action > * {
 
 .postimage {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 1024px) {
