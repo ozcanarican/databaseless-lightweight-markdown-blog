@@ -41,7 +41,9 @@ function mailAt($reply, $name, $konu, $mesaj)
 }
 
 if (isset($_POST['email']) && isset($_POST['isim']) && isset($_POST['mesaj'])) {
-    mailAt($_POST['email'], $_POST['isim'], EMAILSUBJECT, $_POST['mesaj']);
+    $mesaj = "<div style='background-color: #efefef; padding: 1em; margin-bottom: 2em; border-radius: 0.3em'><b>From:</b> " . $_POST['isim'] . " - " . $_POST['email'] . "</div>";
+    $mesaj .= nl2br($_POST['mesaj']);
+    mailAt($_POST['email'], $_POST['isim'], EMAILSUBJECT, $mesaj);
 } else {
     echo "Missing fields";
 }
