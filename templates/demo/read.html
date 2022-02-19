@@ -10,6 +10,30 @@
 	{{post|raw}}
 </div>
 
+{% if series|length > 0 %}
+	<div class="content">
+		<div class="series">
+			<h2>Bu Serinin Diğer Makaleleri</h2>
+			<div class="blogs">
+				{% for post in series %}
+					{% if file != post['file'] %}
+						<div class="blog">
+							<img src="/{{post['image']}}" alt="{{post["title"]}}">
+							<div class="info">
+								<h3>{{post["title"]}}</h3>
+								<p>{{post["description"]}}</p>
+								<a href="/{{prefix}}/{{tag}}/{{ post['file'] }}">
+									<button>DEVAMINI OKU</button>
+								</a>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
 <div class="content">
 	<div class="similiars">
 		{% if similiars|length > 0 %}

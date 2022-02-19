@@ -65,19 +65,40 @@ class BlogHelper
         }
         return $return;
     }
-    public function getArticle($tag, $article)
+    public function getSeries($data, $tag)
+    {
+        $file = json_decode(file_get_contents(SERIES_PATH . "/" . $data['series'] . ".json"), true);
+        $series = array();
+        foreach ($file['files'] as $file) {
+            $data = $this->getData($tag, $file . ".md");
+            array_push($series, $data);
+        }
+        return $series;
+    }
+    public function getData($tag, $article)
     {
         $data = "{}";
-        $content = "";
         $file = file_get_contents(ARTICLE_PATH . "/" . $tag . "/" . $article);
         $parts = explode("}", $file);
         if (count($parts) > 0) {
             $data = $parts[0] . "}";
-            $content = str_replace($data, "", $file);
-        } else {
-            $content = $file;
         }
         $data = json_decode($data, true);
+        $data['file'] = str_replace(".md", "", $article);
+        return $data;
+    }
+    public function getArticle($tag, $article)
+    {
+        $file = file_get_contents(ARTICLE_PATH . "/" . $tag . "/" . $article);
+        $data = $this->getData($tag, $article);
+        if (count($data) > 0) {
+            $pos = strpos($file, "}");
+            $content = substr($file, $pos + 1, strlen($file));
+        }
+        if (isset($data['series'])) {
+            $series = $this->getSeries($data, $tag);
+            $data['series'] = $series;
+        }
         $data["date"] = filectime(ARTICLE_PATH . "/" . $tag . "/" . $article);
         return array("data" => $data, "content" => $content);
     }

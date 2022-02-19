@@ -4,6 +4,7 @@ require_once 'vendor/autoload.php';
 //--Settings
 define("TEMPLATE", "demo");
 define("ARTICLE_PATH", "contents/articles");
+define("SERIES_PATH", "contents/series");
 define("POSTPREFIX", "article");
 define("EMAIL", "");
 define("EMAILSERVER", "");

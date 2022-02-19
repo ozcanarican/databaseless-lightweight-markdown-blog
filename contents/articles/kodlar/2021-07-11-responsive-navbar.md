@@ -1,7 +1,8 @@
 {
 "title": "Responsive Navbar Örneği",
 "description": "Hem desktop ile hem de mobil platforlarla uyumlu çalışan bir ana menüyü, sadece CSS kullanarak birlikte yapalım.",
-"image": "contents/media/responsive-navbar.jpg"
+"image": "contents/media/responsive-navbar.jpg",
+"series": "js-ogreniyorum"
 }
 
 ## Hedefimiz

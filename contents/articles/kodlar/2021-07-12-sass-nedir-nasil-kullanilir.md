@@ -1,7 +1,8 @@
 {
 "title": "SASS NEDİR, NASIL KULLANILIR?",
 "description": "Web dünyasında giderek popülerleşen ve CSS 'in karmaşıklığına son veren SASS 'ın kurulumunu ve kullanımını inceleyelim",
-"image": "contents/media/sass-nedir.jpg"
+"image": "contents/media/sass-nedir.jpg",
+"series": "js-ogreniyorum"
 }
 
 ## SASS kısaca nedir

@@ -470,3 +470,14 @@ main {
     color: clr(gri-600);
   }
 }
+
+.series {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  border-radius: 0.2em;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+  h2 {
+    margin-top: 0;
+  }
+}

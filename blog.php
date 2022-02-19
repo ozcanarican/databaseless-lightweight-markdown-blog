@@ -11,6 +11,11 @@ if (isset($_GET['file'])) {
     $articleFile = $_GET['file'] . ".md";
     $article = $helper->getArticle($_GET['tag'], $articleFile);
     $similiar = $helper->getSimiliar($_GET['tag'], $articleFile, 3);
+    $parse->setMarkupEscaped(false);
+    $series = array();
+    if (isset($article["data"]["series"])) {
+        $series = $article["data"]["series"];
+    }
     echo $twig->render('read.html', [
         'tag' => $_GET['tag'],
         'title' => $article["data"]["title"],
@@ -18,6 +23,8 @@ if (isset($_GET['file'])) {
         'post' => $parse->text($article["content"]),
         'image' => $article["data"]["image"],
         'date' => date("d.m.Y", $article["data"]["date"]),
+        'file' => $_GET['file'],
+        'series' => $series,
         'similiars' => $similiar
     ]);
 }
