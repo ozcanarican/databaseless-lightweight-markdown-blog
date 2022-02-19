@@ -36,6 +36,7 @@ A content can be part of article series and you can have referance array for oth
 To turn a few articles to a serie, create a **json** file under **contents > series** like example;
 
 ```json
+{
   "title": "Title of the serie",
   "files": [
     "js-dom-nesneleri-kontrolu",
